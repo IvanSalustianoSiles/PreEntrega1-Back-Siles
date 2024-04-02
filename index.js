@@ -17,7 +17,7 @@ class ProductManager {
        let codeExists = this.productsArray.some((product) => product.code == newProduct.code);
        
        if (codeExists == false && !Object.keys(newProduct).includes(undefined)) { // Validamos que no se repita el code y que los campos sean obligatorios.
-        this.id = this.id++;
+        this.id = this.id + 1;
         newProduct = {...newProduct, id: this.id};
         this.productsArray.push(newProduct);
        }
